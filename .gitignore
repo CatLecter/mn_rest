@@ -8,7 +8,7 @@ out/
 .project
 .settings
 .classpath
-.env
+.env*
 .factorypath
 *.iml
 *.ipr

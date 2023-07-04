@@ -11,7 +11,7 @@ import io.micronaut.http.annotation.Produces
 class AdminController {
 
     @Get('/')
-    @Produces(MediaType.TEXT_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
     Map checkRole() {
         ['role': 'You`re a admin, Harry!']
     }
