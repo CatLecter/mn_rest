@@ -34,4 +34,10 @@ class UserController {
     Map deleteUser(@QueryValue user_uuid) {
         ['user_uuid': user_uuid]
     }
+
+    @Delete('/')
+    @Produces(MediaType.APPLICATION_JSON)
+    Map deleteAllUsers(@QueryValue user_uuid) {
+        ['user_uuid': user_uuid]
+    }
 }
