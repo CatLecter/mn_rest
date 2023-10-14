@@ -13,6 +13,12 @@ class UserController {
 
     @Get('/')
     @Produces(MediaType.APPLICATION_JSON)
+    Map getAllUser(@QueryValue user_uuid) {
+        ['user_uuid': user_uuid]
+    }
+
+    @Get('/')
+    @Produces(MediaType.APPLICATION_JSON)
     Map getUser(@QueryValue user_uuid) {
         ['user_uuid': user_uuid]
     }
@@ -25,7 +31,7 @@ class UserController {
 
     @Put('/')
     @Produces(MediaType.APPLICATION_JSON)
-    Map updateUser(@Valid @Body UserRequestModel user, @QueryValue user_uuid) {
+    Map updateUser(@Valid @Body UserRequestModel user, @QueryValue user_uuid)K {
         ['user_uuid': user_uuid, 'full_name': user.full_name, 'phone': user.phone]
     }
 
